@@ -29,6 +29,7 @@ class View implements ViewInterface
      */
     public function __construct(RendererInterface $renderer, $file, array $data = [])
     {
+        $this->renderer = $renderer;
         $this->file = $file;
         $this->data = $data;
     }
