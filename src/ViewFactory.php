@@ -17,6 +17,12 @@ abstract class ViewFactory implements ViewFactoryInterface
 
 
     /**
+     * @var string|null $cacheDir A directory to cache rendered templates into (enables caching).
+     */
+    protected $cacheDir = null;
+
+
+    /**
      * @param string $fileName The name of the file to load.
      * @return ViewInterface A view.
      */
