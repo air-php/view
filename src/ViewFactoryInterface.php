@@ -14,4 +14,9 @@ interface ViewFactoryInterface
      * @param array $viewPaths An array of paths to look for view files in.
      */
     public function registerPaths(array $viewPaths);
+
+    /**
+     * @param string $viewPath A view path to check.
+     */
+    public function addPath($viewPath);
 }

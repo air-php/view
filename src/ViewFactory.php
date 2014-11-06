@@ -39,6 +39,15 @@ abstract class ViewFactory implements ViewFactoryInterface
 
 
     /**
+     * @param string $viewPath A view path to check.
+     */
+    public function addPath($viewPath)
+    {
+        $this->viewPaths[] = $viewPath;
+    }
+
+
+    /**
      * Locates a view file and returns its full path.
      *
      * @param string $fileName The file name.
