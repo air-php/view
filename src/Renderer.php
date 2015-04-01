@@ -11,9 +11,16 @@ abstract class Renderer implements RendererInterface
 
 
     /**
-     * @param string|null $cacheDir A directory to cache rendered templates into (enables caching).
+     * @var string|null $partialsDir A directory where static partials are stored.
      */
-    abstract public function __construct($cacheDir = null);
+    protected $partialsDir = null;
+
+
+    /**
+     * @param string|null $cacheDir A directory to cache rendered templates into (enables caching).
+     * @param string|null $partialsDir A directory where static partials are stored.
+     */
+    abstract public function __construct($cacheDir = null, $partialsDir = null);
 
 
     /**

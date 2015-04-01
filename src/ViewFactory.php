@@ -23,6 +23,12 @@ abstract class ViewFactory implements ViewFactoryInterface
 
 
     /**
+     * @var string|null $partialsDir A directory where static partials are stored.
+     */
+    protected $partialsDir = null;
+
+
+    /**
      * @param string $fileName The name of the file to load.
      * @return ViewInterface A view.
      */
