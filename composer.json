@@ -1,6 +1,5 @@
 {
     "name": "air-php/view",
-    "version": "0.2",
     "type": "library",
     "description": "A view library.",
     "require": {
