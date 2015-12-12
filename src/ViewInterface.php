@@ -25,7 +25,7 @@ interface ViewInterface
      * Gets the view data using property access.
      *
      * @param string $key The key.
-	 * @return mixed the view data.
+     * @return mixed the view data.
      */
     public function __get($key);
 
