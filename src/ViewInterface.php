@@ -13,22 +13,41 @@ interface ViewInterface
 
 
     /**
-     * Binds data to the view.
+     * Binds data to the view using property access.
      *
      * @param string $key The key.
-     * @param string $value The value.
+     * @param mixed $value The value.
      */
     public function __set($key, $value);
 
-
+	
     /**
-     * Gets the view data
+     * Gets the view data using property access.
      *
      * @param string $key The key.
+	 * @return mixed the view data.
      */
     public function __get($key);
 
-
+	
+    /**
+     * Binds data to the view.
+     *
+     * @param string $key The key.
+     * @param mixed $value The value.
+     */
+    public function set($key, $value);
+	
+	
+	/**
+     * Gets the view data.
+     *
+     * @param string $key The key.
+	 * @return mixed the view data.
+     */
+    public function get($key);
+	
+	
     /**
      * Renders the view as a string.
      *

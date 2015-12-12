@@ -43,7 +43,7 @@ class View implements ViewInterface
      */
     public function __set($key, $value)
     {
-        $this->data[$key] = $value;
+        $this->set($key, $value);
     }
 
 
@@ -51,12 +51,37 @@ class View implements ViewInterface
      * Gets the view data
      *
      * @param string $key The key.
+	 * @return mixed the view data.
      */
     public function __get($key)
     {
-        return $this->data[$key];
+        return $this->get($key);
     }
 
+	
+	/**
+     * Binds data to the view.
+     *
+     * @param string $key The key.
+     * @param mixed $value The value.
+     */
+    public function set($key, $value)
+	{
+		$this->data[$key] = $value;
+	}
+	
+	
+	/**
+     * Gets the view data.
+     *
+     * @param string $key The key.
+	 * @return mixed the view data.
+     */
+    public function get($key)
+	{
+		return $this->data[$key];
+	}
+	
 
     /**
      * Renders the view as a string.
