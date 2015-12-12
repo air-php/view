@@ -39,15 +39,15 @@ interface ViewInterface
     public function set($key, $value);
 	
 	
-	/**
+    /**
      * Gets the view data.
      *
      * @param string $key The key.
-	 * @return mixed the view data.
+     * @return mixed the view data.
      */
     public function get($key);
-	
-	
+ 
+
     /**
      * Renders the view as a string.
      *
