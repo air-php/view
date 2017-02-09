@@ -72,6 +72,19 @@ class View implements ViewInterface
 
 
     /**
+     * Check if data is binded to the view by key.
+     *
+     * @param string $key The data key to check.
+     *
+     * @return bool
+     */
+    public function exists($key)
+    {
+        return isset($this->data[$key]);
+    }
+
+
+    /**
      * Gets the view data.
      *
      * @param string $key The key.
